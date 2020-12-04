@@ -104,6 +104,11 @@ void boundary_conditions(data_t & data, int nx, int ny, int pid, int np)
       data[ix*ny + iy] = 0.0;
     }
   }
+  else{
+    for(int ix = 1; ix < nx; ++ix) {
+      data[ix*ny + iy] = 0.0;
+    }
+  }
 }
 
 void boundary_conditions(data_t & data, int nx, int ny)
